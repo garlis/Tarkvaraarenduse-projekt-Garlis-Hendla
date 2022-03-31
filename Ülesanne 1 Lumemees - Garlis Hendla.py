@@ -1,3 +1,4 @@
+#https://github.com/garlis/Tarkvaraarenduse-projekt-Garlis-Hendla
 
 import pygame #Impordib pygamei.
 pygame.init()
