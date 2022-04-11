@@ -24,3 +24,10 @@ pygame.display.flip()
 
 pygame.draw.circle(screen, [0, 255, 0], [150,245], 40, 100) #Joonistab rohelise foori tule ringi.
 pygame.display.flip()
+
+running = True
+while running:
+
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
