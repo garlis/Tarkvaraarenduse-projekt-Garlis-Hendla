@@ -34,13 +34,13 @@ for i in range(2): #Alustab for tsükklit ja määrab 2 objekti.
 
 gameover = False  #Muutuja gameover saab väärtuse False.
 while not gameover:  #Algab while tsükkel, kui ei ole gameover.
+    #Mängu ristist sulgemine kasutades tsüklit.
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            gameover = True
+    
     #FPS - Frames per second.
     clock.tick(120) #Määrab ekraaniliikumise kiiruse, ehk 120 kaadrit sekundis.
-    events = pygame.event.get() #Muutuja events saab väärtuse pygame moodul.
-    #Mängu ristist sulgemine kasutades tsüklit.
-    for i in pygame.event.get():
-        if i.type == pygame.QUIT:
-            sys.exit()
 
     for i in range(len(coords)): #i saab koordinaadid vastavalt objektide arvule.
         screen.blit(blue, [coords[i][0], coords[i][1], 20, 20]) #blue auto liigub juhuslike kordinaatide abil.
@@ -59,9 +59,4 @@ while not gameover:  #Algab while tsükkel, kui ei ole gameover.
     
 
 
-pygame.quit()                       
-while True:                                  #Korduslause kui õige.
-        for event in pygame.event.get():     #Event saab exit mooduli parameetrid.
-            if event.type == pygame.QUIT:    #Kui event on võrdne pygame quitiga.
-                pygame.quit()                #Lõpetab tegevuse kui, kasutaja aktiveerib.
-                exit()                       #Väljub.
+pygame.quit()
