@@ -32,10 +32,11 @@ pygame.display.flip()
 pygame.draw.polygon(screen, (255, 0, 0), [(145, 80), (155, 80), (150, 95)]) #Joonistab lumemehe nina.
 pygame.display.flip()
 
+running = True
+while running:
 
-
-
-
-
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
 
 
